@@ -5,19 +5,16 @@ from numpy.linalg import norm
 
 # Set up tkinter window
 root = tk.Tk()
-# root.withdraw()  # Hide the main window
 root.title("Gas Particle Collision Simulation")
 w, h = 700, 700
 canvas = tk.Canvas(root, width=w, height=h)
 canvas.pack()
 
 # Set simulation parameters
-particle_count = int(input("Enter particle count (default 1000):"))
-radius = float(input("Enter particle radius (default 3):"))
-velocity = float(input("Enter particle velocity (default 10):"))
-time_step = float(input("Enter time step (default 0.2):"))
-
-# root.deiconify()  # Show the main window
+particle_count = int(input("Enter particle count (default is 1000):"))
+radius = float(input("Enter particle radius (default is 3):"))
+velocity = float(input("Enter particle velocity (default is 10):"))
+time_step = float(input("Enter time step (default is 0.2):"))
 
 # Generate random initial positions and velocities for particles
 particle_state = np.zeros((particle_count, 4))   # 4-vector containing the state of each particles
